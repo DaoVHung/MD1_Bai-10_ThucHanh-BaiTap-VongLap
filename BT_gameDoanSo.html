@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+</head>
+<body>
+<input id="batDau"  onclick="choi()" type="button" value="CHƠI">
+<button id="choiLai" onclick="choiLai()"> Chơi Lại</button>
+
+<script>
+  function choi(){
+    let TU=+prompt("NHẬP VÀO KHOẢNG MUỐN ĐOÁN TỪ:");
+    let DEN=+prompt("ĐẾN")
+      let n=TU
+      let m=DEN
+      let y=Math.floor(Math.random() * (m+1-n))+n;
+    count=3
+      console.log(y)
+      let c=+prompt("NHẬP SỐ BẠN MUỐN TRỌN VÀO ĐÂY:")
+      if(c==y) {
+          alert("bạn ĐÃ thắng")
+      }else {
+          alert("Số bạn chọn là "+ c + " Số trúng thưởng là "+ y +"  CHÚC BẠN MAY MẮN LẦN SAU")
+      }
+      }
+      function choiLai(){
+     let result=confirm("BẠN CÓ MUỐN CHƠI LẠI KHÔNG ?");
+          if(result==true){
+              choi();
+          }else {
+              alert("HẸN GẶP LẠI")
+          }
+      }
+</script>
+</body>
+</html>
