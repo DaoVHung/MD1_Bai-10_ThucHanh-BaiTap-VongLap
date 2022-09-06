@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giai Thừa</title>
+</head>
+<body>
+<h1>Nhập vào 1 số nguyên dương để tính giai thừa ( số hoán vị )</h1>
+<input type="number" id="nhapSo">
+<button onclick="tinh()" id="tinhKetQua">Tính Kết Quả</button>
+<p id="hienThi"></p>
+<script>
+    function tinh(){
+    let n=+document.getElementById('nhapSo').value;
+    let a=1
+    for ( i=1; i<=n;i++){
+        console.log('i=',i)
+        a=(a*i)
+    }
+    document.getElementById('hienThi').innerText='Giai thừa của '+ n + ' là :' + a
+    }
+</script>
+</body>
+</html>
